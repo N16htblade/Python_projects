@@ -1,0 +1,1 @@
+Code asks for bill total, desired tip percentage, number of ppl and splits it accordingly.

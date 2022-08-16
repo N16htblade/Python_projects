@@ -1,0 +1,1 @@
+If, elif, else practice with random library.

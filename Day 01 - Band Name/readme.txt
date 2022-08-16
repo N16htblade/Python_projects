@@ -1,0 +1,1 @@
+Code lines ask user for city name, pet name and puts them together to make a band name.
