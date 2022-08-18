@@ -1,0 +1,1 @@
+Minigame to try and guess a random number with limited attempts.
