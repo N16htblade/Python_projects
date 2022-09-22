@@ -1,0 +1,1 @@
+API practice, check weather forecast and send warning message in case of rain or bad weather.

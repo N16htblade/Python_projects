@@ -1,0 +1,1 @@
+Web scrapping and API practice; check stock action and text latest news in case of a big move.
