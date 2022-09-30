@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    color: #66BFBF;
+    font-size: 562.5%;
+    margin: 50px auto 0 auto;
+}
+
+h2 {
+    color: #66BFBF;
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+
+h3 {
+    color: #11999E;
+}
+
+hr {
+    border-style: none;
+    border-top-style: dotted;
+    border-color: grey;
+    border-width: 5px;
+    width: 5%;
+}
+
+p {
+    line-height: 2;
+}
+
+.intro {
+    padding-bottom: 20px;
+}
+
+.skill-row {
+    width: 50%;
+    margin: 40 auto 40 auto;
+    text-align: left;
+}
+
+.footer-link {
+    color: #11999E;
+    padding: 20px;
+}
+
+.top-container {
+    background-color: #E4F9F5;
+    margin-top: 0;
+    padding-top: 100px;
+    position: relative;
+}
+
+.middle-container {
+    margin: 50px 0;
+}
+
+.top-cloud {
+    position: absolute;
+    right: 300px;
+    top: 50px;
+}
+
+.bottom-cloud {
+    position: absolute;
+    left: 300px;
+    bottom: 300px;
+}
+
+.google-icon {
+    width: 15%;
+    float: left;
+    padding-right: 30px;
+}
+
+.water-icon {
+    width: 15%;
+    float: right;
+    padding-left: 30px;
+}
+
+.btn {
+    border-radius: 8px;
+    color: #66BFBF;
+}
+
+.btn:hover {
+    color: #30e3cb;
+}
+
+.bottom-container {
+    padding: 20px;
+    background-color: #66BFBF;
+}
+
+.copyright {
+    color: white;
+}
