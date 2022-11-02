@@ -1,32 +1,38 @@
-from cgitb import reset
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 import time
 
 chorme_driver_path = "C:\PyLearning\dev\chromedriver.exe"
 driver = webdriver.Chrome(executable_path=chorme_driver_path)
 driver.get("https://orteil.dashnet.org/experiments/cookie/")
+test_end = time.time() + 60 * 5
 
-while True:
+def run_the_store():
+    stores = ['buyShipment', 'buyMine', 'buyFactory'] # ',buyGrandma', 'buyCursor'
+    for store in stores:
+        attempt_buy(store)
+    
+def attempt_buy(element):
+    time.sleep(0.05)
+    money = driver.find_element(By.ID, "money").text
+    money_value = int(''.join([i for i in money if i.isdigit()]))
+
+    item = driver.find_element(By.CSS_SELECTOR, f'#{element} b').text
+    item_value = int(''.join([i for i in item if i.isdigit()]))
+
+    if money_value > item_value:
+        purchase = driver.find_element(By.ID, element)
+        purchase.click()
+
+
+while time.time() < test_end:
     t_end = time.time() + 5
     while time.time() < t_end:
         main_event = driver.find_element(By.ID, "cookie").click()
 
-    money = driver.find_element(By.ID, "money").text
-    money_value = int(''.join([i for i in money if i.isdigit()]))
+    run_the_store()
 
-    while money_value > 0:
-        money = driver.find_element(By.ID, "money").text
-        money_value = int(''.join([i for i in money if i.isdigit()]))
+score = driver.find_element(By.ID, "cps").text
+print (f"Final cps: {score}")
 
-        cursor = driver.find_element(By.CSS_SELECTOR, '#buyCursor b').text
-        cursor_value = int(''.join([i for i in cursor if i.isdigit()]))
-        print (f"My Money = {money_value}")
-        print (f"Cursor = {cursor_value}")
-        
-        if money_value > cursor_value:
-            purchase = driver.find_element(By.ID, "buyCursor")
-            purchase.click()
-        else:
-            break
+driver.close()
