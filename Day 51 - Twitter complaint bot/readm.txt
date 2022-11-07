@@ -1,0 +1,17 @@
+DAY 51 - Twitter complaints bot
+
+Description:
+Twitter bot using Selenium to check Internet speed and tweet at your ISP.
+
+Requirements:
+- Python + Selenium
+- use class and functions to complete project
+
+Steps:
+- Open an Internet speed test website;
+- run speed test and store results;
+- open Twitter and sing in;
+- write a new tweet using the stored variables and send it.
+
+Notes:
+Save username and passwords as environment variables
